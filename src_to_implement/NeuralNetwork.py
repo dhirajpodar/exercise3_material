@@ -46,3 +46,6 @@ class NeuralNetwork:
 
     def phase(self):
         pass
+
+    def norm(self, weights):
+        pass

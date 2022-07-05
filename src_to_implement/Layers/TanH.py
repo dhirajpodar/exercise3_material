@@ -1,9 +1,10 @@
 from Layers.Base import BaseLayer
 import numpy as np
 
+
 class TanH(BaseLayer):
     def __init__(self):
-        super().init()
+        super().__init__()
         self.out = None
 
     def forward(self, input_tensor):
