@@ -23,3 +23,25 @@ On the Iris dataset, we achieve an accuracy of: 98.0%
 On the Iris dataset using Batchnorm, we achieve an accuracy of: 24.0%
 On the Iris dataset using Dropout, we achieve an accuracy of: 72.0%
 On the Iris dataset, we achieve an accuracy of: 96.0%
+On the UCI ML hand-written digits dataset using Batch_norm and L2 we achieve an accuracy of: 96.661101836394%
+On the UCI ML hand-written digits dataset using Batch_norm we achieve an accuracy of: 98.33055091819699%
+On the UCI ML hand-written digits dataset using ADAM we achieve an accuracy of: 97.49582637729549%
+On the UCI ML hand-written digits dataset using L1_regularizer we achieve an accuracy of: 96.8280467445743%
+On the UCI ML hand-written digits dataset using L2_regularizer we achieve an accuracy of: 97.16193656093489%
+On the UCI ML hand-written digits dataset using Dropout we achieve an accuracy of: 89.64941569282136%
+On the Iris dataset, we achieve an accuracy of: 96.0%
+On the Iris dataset, we achieve an accuracy of: 98.0%
+On the Iris dataset using Batchnorm, we achieve an accuracy of: 88.0%
+On the Iris dataset using Dropout, we achieve an accuracy of: 64.0%
+On the Iris dataset, we achieve an accuracy of: 96.0%
+On the UCI ML hand-written digits dataset using Batch_norm and L2 we achieve an accuracy of: 97.8297161936561%
+On the UCI ML hand-written digits dataset using Batch_norm we achieve an accuracy of: 97.9966611018364%
+On the UCI ML hand-written digits dataset using ADAM we achieve an accuracy of: 95.82637729549248%
+On the UCI ML hand-written digits dataset using L1_regularizer we achieve an accuracy of: 96.99499165275459%
+On the UCI ML hand-written digits dataset using L2_regularizer we achieve an accuracy of: 96.32721202003339%
+On the UCI ML hand-written digits dataset using Dropout we achieve an accuracy of: 88.48080133555926%
+On the Iris dataset, we achieve an accuracy of: 96.0%
+On the Iris dataset, we achieve an accuracy of: 98.0%
+On the Iris dataset using Batchnorm, we achieve an accuracy of: 88.0%
+On the Iris dataset using Dropout, we achieve an accuracy of: 56.00000000000001%
+On the Iris dataset, we achieve an accuracy of: 96.0%

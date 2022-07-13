@@ -5,11 +5,11 @@ import numpy as np
 class TanH(BaseLayer):
     def __init__(self):
         super().__init__()
-        self.out = None
+        self.tanh_output = None
 
     def forward(self, input_tensor):
-        self.out = np.tanh(input_tensor)
-        return self.out
+        self.tanh_output = np.tanh(input_tensor)
+        return self.tanh_output
 
     def backward(self, error_tensor):
-        return error_tensor * (1 - pow(self.out, 2))
+        return error_tensor * (1 - pow(self.tanh_output, 2))
