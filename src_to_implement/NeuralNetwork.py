@@ -10,6 +10,7 @@ class NeuralNetwork:
         self.bias_initializer = bias_initializer
         self.loss = []
         self.layers = []
+        #self._phase = self.testing_phase
         self.label_tensor = None
         self.data_layer = None
         self.loss_layer = None
@@ -34,18 +35,26 @@ class NeuralNetwork:
         self.layers.append(layer)
 
     def train(self, iterations):
+        #self.phase = False
         for _ in range(iterations):
             loss = self.forward()
             self.backward()
             self.loss.append(loss)
 
     def test(self, input_tensor):
+        #self.phase = True
         for layer in self.layers:
+            #layer.phase = True
             input_tensor = layer.forward(input_tensor)
         return input_tensor
 
+    @property
     def phase(self):
-        pass
+        return self._phase
+
+    @phase.setter
+    def phase(self, phase):
+        self._phase = phase
 
     def norm(self, weights):
         pass

@@ -919,7 +919,7 @@ class TestConstraints(unittest.TestCase):
         weights_tensor = np.ones(self.shape)
         weights_tensor[1:3, 2:4] *= -1
 
-        optimizer = Optimizers.SgdWithMomentum(2,0.9)
+        optimizer = Optimizers.SgdWithMomentum(2, 0.9)
         regularizer = Constraints.L1_Regularizer(2)
         optimizer.add_regularizer(regularizer)
 

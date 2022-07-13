@@ -31,9 +31,10 @@ class SgdWithMomentum(Optimizer):
     def calculate_update(self, weight_tensor, gradient_tensor):
         self.vk = self.momentum_rate * self.vk - self.learning_rate * gradient_tensor
         if self.regularizer:
-            self.vk = self.momentum_rate * self.vk - self.learning_rate * self.regularizer.calculate_gradient(weight_tensor)
+            weight_tensor = weight_tensor - self.learning_rate * self.regularizer.calculate_gradient(weight_tensor)
 
         return weight_tensor + self.vk
+
 
 
 class Adam(Optimizer):
@@ -49,12 +50,13 @@ class Adam(Optimizer):
     def calculate_update(self, weight_tensor, gradient_tensor):
         self.vk = self.mu * self.vk + (1 - self.mu) * gradient_tensor
         self.rk = self.rho * self.rk + (1 - self.rho) * (gradient_tensor * gradient_tensor)
-        self.bias_correlation_vk = self.vk / (1 - self.mu**self.k)
-        self.bias_correlation_rk = self.rk / (1 - self.rho**self.k)
+        self.bias_correlation_vk = self.vk / (1 - self.mu ** self.k)
+        self.bias_correlation_rk = self.rk / (1 - self.rho ** self.k)
         self.k += 1
 
         if self.regularizer:
             weight_tensor -= self.learning_rate * self.regularizer.calculate_gradient(weight_tensor)
 
-        weight_tensor -= self.learning_rate * (self.bias_correlation_vk / (np.sqrt(self.bias_correlation_rk) + self.epsilon))
+        weight_tensor -= self.learning_rate * (
+                    self.bias_correlation_vk / (np.sqrt(self.bias_correlation_rk) + self.epsilon))
         return weight_tensor
