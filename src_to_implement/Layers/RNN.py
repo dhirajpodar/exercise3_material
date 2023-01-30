@@ -42,10 +42,10 @@ class RNN(BaseLayer):
 
         output_tensor = np.zeros((batch_size, self.output_size))  # initialize hidden_state
 
-        if not self._memorize:
-            hidden_state = np.zeros((1, self.hidden_size))  # initialize hidden_state with zero
-        else:
+        if self._memorize:
             hidden_state = self.hidden_state
+        else:
+            hidden_state = np.zeros((1, self.hidden_size))  # initialize hidden_state with zero
 
         for t in range(batch_size):
             # concatenation previous hidden state with corresponding input tensor

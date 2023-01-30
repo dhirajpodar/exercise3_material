@@ -4,7 +4,7 @@ import numpy as np
 class CrossEntropyLoss:
     def __init__(self):
         self.input_tensor = None
-        self.epsilon = np.finfo(float).eps
+        self.epsilon = np.finfo(np.float32).eps
 
     def forward(self, prediction_tensor, label_tensor):
         self.input_tensor = prediction_tensor
